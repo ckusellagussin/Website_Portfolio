@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Selectable
+  - Youtube
+  - Github
+  - Twitter
+  - LinkedIn
+  - GodsOS
+  - InstaFitness
+  - GameJam
   layers:
   - Default
   - TransparentFX
