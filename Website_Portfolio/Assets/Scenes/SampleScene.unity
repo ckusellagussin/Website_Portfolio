@@ -10632,7 +10632,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   screenPosition: {x: 0, y: 0, z: 0}
-  mouseSensitivity: 2000
+  mouseSensitivity: 750
   playerBody: {fileID: 202714071}
 --- !u!1001 &992379562
 PrefabInstance:
