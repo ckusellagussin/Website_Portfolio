@@ -6,9 +6,8 @@ using UnityEngine.Assertions.Must;
 
 public class Looking : MonoBehaviour
 {
-
+    public Vector3 screenPosition = new Vector3(0,0,0);
     public float mouseSensitivity = 100;
-
     public Transform playerBody;
 
     private float xRotation = 0f;
@@ -18,14 +17,13 @@ public class Looking : MonoBehaviour
     {
 
         Cursor.lockState = CursorLockMode.Locked;
-
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
@@ -34,6 +32,6 @@ public class Looking : MonoBehaviour
         
         transform.localRotation = Quaternion.Euler(xRotation,0f,0f);
         playerBody.Rotate(Vector3.up * mouseX);
-
+        screenPosition = Input.mousePosition;
     }
 }

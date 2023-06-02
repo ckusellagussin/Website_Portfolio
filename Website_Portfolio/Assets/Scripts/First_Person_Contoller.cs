@@ -9,8 +9,10 @@ public class First_Person_Contoller : MonoBehaviour
 
     public CharacterController Controller;
     public float speed = 12f;
-    private Vector3 velocity;
     public float gravity = -9.81f;
+
+    private Vector3 velocity;
+    
     
     void Start()
     {
@@ -21,7 +23,7 @@ public class First_Person_Contoller : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
 
