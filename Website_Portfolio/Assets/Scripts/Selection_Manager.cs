@@ -13,6 +13,10 @@ public class Selection_Manager : MonoBehaviour
     [SerializeField] private GameObject popupUI2;
     private Transform _selection;
     
+    private Vector3 direction;
+    public float sphereRadius;
+    public float maxDistance;
+  
     // Start is called before the first frame update
     void Start()
     {
@@ -30,11 +34,12 @@ public class Selection_Manager : MonoBehaviour
         }
 
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        
         RaycastHit hit;
         
         
         if (Physics.Raycast(ray, out hit, 50))
-        { 
+        {
             var selection = hit.transform;
             
             if (selection.CompareTag(selectableTag))
