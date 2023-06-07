@@ -12,6 +12,8 @@ public class Link_Manager : MonoBehaviour
     [SerializeField] private string selectableTag5 = "Youtube";
     [SerializeField] private string selectableTag6 = "GodsOS";
     [SerializeField] private string selectableTag7 = "InstaFitness";
+    [SerializeField] private string selectableTag9 = "DevelopmentBlog";
+    [SerializeField] private string selectableTag10 = "Trello_Nuclino";
     [SerializeField] private Material defaultMaterial;
 
     private Transform _selection;
@@ -172,6 +174,54 @@ public class Link_Manager : MonoBehaviour
 
                 _selection = selection;
             }
+            
+            if (selection.CompareTag(selectableTag9))
+            {
+                
+                var selectionRenderer = selection.GetComponent<Renderer>();
+                if (selectionRenderer != null)
+                {
+
+                    selectionRenderer.material = highlightMaterial;
+
+                }
+                
+                if (Input.GetMouseButtonDown(0))
+                {
+
+                    Application.OpenURL("https://www.ckusellagussin.com/blog");
+                   
+                }
+                
+
+                _selection = selection;
+            }
+            
+            if (selection.CompareTag(selectableTag10))
+            {
+                
+                var selectionRenderer = selection.GetComponent<Renderer>();
+                if (selectionRenderer != null)
+                {
+
+                    selectionRenderer.material = highlightMaterial;
+
+                }
+                
+                if (Input.GetMouseButtonDown(0))
+                {
+
+                    Application.OpenURL("https://trello.com/b/S8HhaCXq/project-bloodlines");
+                    Application.OpenURL("https://share.nuclino.com/p/Game-overview-eEIT0oQ5AQI51L8ssu2XNE");
+                    
+                }
+                
+
+                _selection = selection;
+            }
+            
+            
+            
             
             
         }

@@ -12,6 +12,8 @@ TagManager:
   - GodsOS
   - InstaFitness
   - GameJam
+  - DevelopmentBlog
+  - Trello_Nuclino
   layers:
   - Default
   - TransparentFX
